@@ -150,31 +150,37 @@ img {
 
 .featured-presenters-list li {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  align-items: center;
   gap: 20px;
+}
+
+.more {
+  border: 1px solid #d3d3d2;
+  padding: 10px 20px;
+  background: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .presenter-image {
   position: relative;
-  width: 100%;
 }
 
 .bg {
   top: 0;
   left: 0;
-  position: absolute;
+  position: relative;
+  width: 95px;
+  height: 100px;
 }
 
 .image-p {
   top: 10px;
-  left: 5%;
+  left: 10%;
   position: absolute;
   z-index: 10;
-}
-
-.featured-presenters-list li img {
-  width: 95px;
-  height: 100px;
+  width: 60px;
 }
 
 .career {
@@ -223,12 +229,112 @@ footer {
   background-color: white;
 }
 
-footer img {
-  width: 50px;
+.footer-img {
+  width: 150px;
 }
 
 footer h2 {
   font-size: 12px;
+}
+
+/* ABOUT PAGE */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about p {
+  color: #ec5242;
+}
+
+.ceremony {
+  font-weight: 800;
+  color: #ec5242;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.history {
+  border: 2.5px solid white;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.reach-out {
+  font-size: 12px;
+}
+
+.about a {
+  color: black;
+  font-size: 16px;
+}
+
+.design-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.design-logo p {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-logo {
+  width: 200px;
+  border: 2.5px solid white;
+  margin: 0 auto;
+}
+
+.past-events {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.past-events h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.past-events p {
+  text-align: center;
+}
+
+.card-events {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.card-image {
+  width: 285px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #ec5242;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image img {
+  opacity: 0.4;
+}
+.card-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 1110px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 /* @media (min-width: 768px) {

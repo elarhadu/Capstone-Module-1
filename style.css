@@ -31,8 +31,19 @@ img {
   justify-content: flex-start;
   align-items: flex-end;
 }
+.login {
+  display: none;
+}
+
+.nav-links {
+  display: none;
+}
 
 .header-logo {
+  display: none;
+}
+
+.campaign {
   display: none;
 }
 
@@ -78,8 +89,8 @@ img {
 
 .underline {
   background-color: #ec5242;
-  width: 70px;
-  height: 5px;
+  width: 45px;
+  height: 0.5px;
 }
 .outline {
   list-style: none;
@@ -120,13 +131,20 @@ img {
   width: 70%;
   margin: 0 auto;
   padding: 15px 25px;
-  border: none;
+  border: 1px solid #ec5242;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .tickets a {
   text-decoration: none;
   color: white;
   font-size: 15px;
+}
+
+.more-schedule {
+  display: none;
 }
 
 .featured-presenters {
@@ -150,7 +168,6 @@ img {
 
 .featured-presenters-list li {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   gap: 20px;
 }
@@ -183,6 +200,12 @@ img {
   width: 60px;
 }
 
+.underline-1 {
+  background-color: #3d3f47;
+  width: 30px;
+  height: 0.5px;
+}
+
 .career {
   color: #ec5242;
 }
@@ -213,6 +236,8 @@ img {
   display: flex;
   gap: 12px;
   list-style: none;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .partner-list li {
@@ -315,6 +340,7 @@ footer h2 {
 }
 
 .card-image {
+  position: relative;
   width: 285px;
   margin: 0 auto;
   position: relative;
@@ -328,22 +354,24 @@ footer h2 {
 }
 .card-info {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 1110px;
-  left: 50%;
+  top: 10px;
+  left: 55px;
   transform: translate(-50%, -50%);
   color: white;
 }
 
-/* @media (min-width: 768px) {
+.partners-1 {
+  background-color: #272a31;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
   .bar {
-    visibility: hidden;
-  }
-  .logo {
-    display: block;
-    width: 100px;
+    display: none;
   }
 
   .login {
@@ -353,6 +381,7 @@ footer h2 {
     align-items: center;
     gap: 10px;
     padding-right: 65px;
+    position: ;
   }
 
   .login-item {
@@ -372,8 +401,100 @@ footer h2 {
 
   .nav-bar {
     display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 15px;
+  }
+
+  .header-logo {
+    display: block;
+    width: 100px;
+  }
+  .nav-links {
+    display: block;
   }
   .nav-menu {
     display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 15px;
   }
-} */
+  .nav-menu a {
+    text-decoration: none;
+    color: #3d3f47;
+  }
+
+  .nav-item::selection {
+    color: #ec5242;
+  }
+
+  .campaign {
+    display: block;
+    border: #ec5242 solid;
+    padding: 2px;
+  }
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4px;
+    padding: 15px;
+  }
+  .outline {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+    gap: 2px;
+  }
+  .outline li {
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 15px;
+  }
+
+  .tickets {
+    display: none;
+  }
+
+  .more-schedule {
+    display: block;
+  }
+  .more-schedule a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 10px 15px;
+  }
+
+  .featured-presenters-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .history {
+    width: 360px;
+  }
+
+  .card-events {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .partners-1 {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 1.9rem;
+    padding: 2.5rem;
+    justify-content: center;
+    background-color: #272a31;
+  }
+
+  .footer h2 {
+    color: white;
+  }
+}

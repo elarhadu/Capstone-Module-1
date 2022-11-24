@@ -35,8 +35,71 @@ img {
   display: none;
 }
 
-.nav-links {
-  display: none;
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: #ec5242;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburger {
+  display: block;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 25px;
+  gap: 0;
+  flex-direction: column;
+  background-color: #ec5242;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.nav-item {
+  margin: 16px 0;
+}
+
+.nav-menu .active {
+  left: 0;
 }
 
 .header-logo {
@@ -58,6 +121,7 @@ img {
 
 .about-intro {
   -webkit-background-clip: text;
+  background-clip: text;
   background-image: url(images/header\ background.jpeg);
   color: transparent;
   font-size: 35px;
@@ -170,14 +234,25 @@ img {
   display: flex;
   align-items: center;
   gap: 20px;
+  /* display: none; */
 }
 
-.more {
+/* .featured-presenters-list li:nth-child(1),
+.featured-presenters-list li:nth-child(2) {
+  display: inline-flex;
+} */
+
+#more {
   border: 1px solid #d3d3d2;
   padding: 10px 20px;
   background: #fff;
   margin-bottom: 20px;
   cursor: pointer;
+}
+
+#more:hover {
+  background-color: #ec5242;
+  color: #272a31;
 }
 
 .presenter-image {
@@ -339,8 +414,11 @@ footer h2 {
   margin: 0 auto;
 }
 
-.card-image {
+.card-image-wrapper {
   position: relative;
+}
+
+.card-image {
   width: 285px;
   margin: 0 auto;
   position: relative;
@@ -354,10 +432,20 @@ footer h2 {
 }
 .card-info {
   position: absolute;
-  top: 10px;
-  left: 55px;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  text-align: center;
+}
+
+.card-info p {
+  margin: 0;
+  width: 220px;
+}
+
+.card-info h3 {
+  margin: 0;
 }
 
 .partners-1 {
@@ -381,7 +469,7 @@ footer h2 {
     align-items: center;
     gap: 10px;
     padding-right: 65px;
-    position: ;
+    /* position: ; */
   }
 
   .login-item {

@@ -43,30 +43,30 @@
           <a href="index.html">
             <img src="images/logo.jpg" alt="" class="header-logo" />
           </a>
-
-          <ul class="nav-menu">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#Program" class="nav-link">Program</a>
-            </li>
-            <li class="nav-item">
-              <a href="#Join" class="nav-link">Join</a>
-            </li>
-            <li class="nav-item">
-              <a href="#Sponsor" class="nav-link">Sponsor</a>
-            </li>
-            <li class="nav-item">
-              <a href="#News" class="nav-link">News</a>
-            </li>
-          </ul>
-
-          <div class="campaign">
-            <p class="gm-campaign">GM Campaign</p>
+          <div class="nav-menu-wrapper">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#Program" class="nav-link">Program</a>
+              </li>
+              <li class="nav-item">
+                <a href="#Join" class="nav-link">Join</a>
+              </li>
+              <li class="nav-item">
+                <a href="#Sponsor" class="nav-link">Sponsor</a>
+              </li>
+              <li class="nav-item">
+                <a href="#News" class="nav-link">News</a>
+              </li>
+            </ul>
+            <div class="campaign">
+              <p class="gm-campaign">GM Campaign</p>
+            </div>
           </div>
         </nav>
       </div>
@@ -75,13 +75,12 @@
     <main>
       <section class="intro">
         <p class="movie-quote">
-          "Films and life are like clay,waiting for us to mould it ~Shirley
-          Maclaine"
+          “Everything has its beauty, but not everyone sees it.” – Andy Warhol.
         </p>
         <h1 class="about-intro">
           <strong> GHANA MOVIE AWARDS '23 </strong>
         </h1>
-        <p class="about">
+        <p id="about">
           Ghana Movie Awards is an annual film award to recognise excellence in
           the Ghanaian film industry.
         </p>
@@ -170,7 +169,26 @@
             <!-- Created dynamically with JavaScript -->
           </div>
         </div>
-        <div id="more">See More</div>
+        <div id="more">
+          <p>More</p>
+
+          <div style="width: 12px; height: 6px">
+            <svg
+              width="12"
+              height="6"
+              viewBox="0 0 14 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                fill="#ec5242"
+              />
+            </svg>
+          </div>
+        </div>
       </section>
 
       <section class="partners">
@@ -194,10 +212,7 @@
       <div class="footer-img">
         <img src="images/logo.jpg" alt="" />
       </div>
-      <h2>
-        © GHANA MOVIE AWARDS '23. <br />
-        Some Rights Reserved
-      </h2>
+      <h2>© GHANA MOVIE AWARDS '23. Some Rights Reserved</h2>
     </footer>
     <script src="script.js"></script>
   </body>

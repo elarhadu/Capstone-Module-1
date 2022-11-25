@@ -1,3 +1,6 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable no-plusplus */
+/* eslint-disable quotes */
 // HAMBURGER MENU INTERACTION
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -11,16 +14,14 @@ hamburger.addEventListener("click", () => {
   body.classList.toggle("no-scroll");
 });
 
-document.querySelectorAll(".nav-link").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-    header.classList.remove("full-screen");
-    body.classList.remove("no-scroll");
-  })
-);
+document.querySelectorAll(".nav-link").forEach((n) => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+  header.classList.remove("full-screen");
+  body.classList.remove("no-scroll");
+}));
 
-// CREATING "FEATURED PRESENTERS DYNAMICALLY"
+// CREATING 'FEATURED PRESENTERS DYNAMICALLY'
 
 const presenters = [
   {
@@ -74,38 +75,39 @@ const presenters = [
     presenterName: "Sarkodie",
     career: "Rapper",
     about:
-      "Sarkodie is a Ghanaian rapper, songwriter, and entrepreneur. He was announced the first winner of BET's Best International Flow artist at the 2019 BET Hip Hop Awards.",
+      "Sarkodie is a Ghanaian rapper, songwriter, and entrepreneur. He was announced the first winner of BET Best International Flow artist at the 2019 BET Hip Hop Awards.",
   },
 ];
 
-const featuredPresenters = document.querySelector(".featured-presenters");
-presenters.forEach((presenter, index) => {
+// const featuredPresenters = document.querySelector(".featured-presenters");
+presenters.forEach((presenter) => {
   document.querySelector(".presenterSection").innerHTML += `
 
-<div class= "presenters">
-            <div class="presenter-image">
-                <img src="${presenter.image}" alt="Presenter's image" />
+<div class= 'presenters'>
+            <div class='presenter-image'>
+            <img src='images/check background.png' alt='bgimg' class='bgImg'/>
+                <img src='${presenter.image}' class='bgPresent' alt='Presenter's image' />
             </div>
-            <div class="presenter-details">
+            <div class='presenter-details'>
               <p>${presenter.presenterName}</p>
-              <p class="career"><em>${presenter.career}.</em></p>
-              <div class="underline-1"></div>
+              <p class='career'><em>${presenter.career}.</em></p>
+              <div class='underline-1'></div>
               <p>${presenter.about}</p>
           </div>
           </div>
   `;
 });
 
-let loadMore = document.querySelector("#more");
+const loadMore = document.querySelector("#more");
 let currentItem = 2;
 
 loadMore.onclick = () => {
-  let btn = [
+  const btn = [
     ...document.querySelectorAll(
       ".featured-presenters .presenter-container .presenters"
     ),
   ];
-  for (var i = currentItem; i < currentItem + 2; i++) {
+  for (let i = currentItem; i < currentItem + 2; i++) {
     btn[i].style.display = "flex";
   }
   currentItem += 2;

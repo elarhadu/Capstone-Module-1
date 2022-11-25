@@ -35,39 +35,24 @@ img {
   display: none;
 }
 
-.nav-item {
-  list-style: none;
-}
-
-.nav-link {
-  transition: 0.7s ease;
-}
-
-.nav-link:hover {
-  color: #ec5242;
-}
-
-.nav-item a {
-  color: white;
-  text-decoration: none;
-}
-
 .nav-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   padding: 0 24px;
 }
-
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+.header-logo {
+  display: none;
 }
-
+.campaign {
+  display: none;
+}
 .hamburger {
   display: block;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: -15px;
+  z-index: 100;
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -75,39 +60,57 @@ img {
 }
 
 .hamburger.active .bar:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+.no-scroll {
+  overflow-y: hidden;
+  background-color: white;
+}
+
+.full-screen {
+  height: 100vh;
 }
 
 .nav-menu {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   position: fixed;
   left: -100%;
-  top: 25px;
-  gap: 0;
-  flex-direction: column;
+  top: -17px;
   background-color: #ec5242;
   width: 100%;
+  height: 100%;
   text-align: center;
   transition: 0.3s;
+  opacity: 0.5;
 }
 
 .nav-item {
   margin: 16px 0;
 }
 
-.nav-menu .active {
+.nav-link {
+  color: white;
+  transition: 0.7s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-menu.active {
   left: 0;
 }
 
-.header-logo {
-  display: none;
-}
-
-.campaign {
-  display: none;
+.nav-link:hover {
+  color: #272a31;
+  text-decoration: underline;
 }
 
 .intro {
@@ -222,57 +225,44 @@ img {
   padding: 0 10px;
 }
 
-.featured-presenters-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.presenter-container {
+  margin-top: 40px;
 }
 
-.featured-presenters-list li {
+.presenters {
   display: flex;
   align-items: center;
-  gap: 20px;
-  /* display: none; */
+  gap: 10px;
+  padding: 10px;
+  display: none;
 }
 
-/* .featured-presenters-list li:nth-child(1),
-.featured-presenters-list li:nth-child(2) {
-  display: inline-flex;
-} */
-
-#more {
-  border: 1px solid #d3d3d2;
-  padding: 10px 20px;
-  background: #fff;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-#more:hover {
-  background-color: #ec5242;
-  color: #272a31;
+.presenters:nth-child(1),
+.presenters:nth-child(2) {
+  display: flex;
 }
 
 .presenter-image {
-  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
-.bg {
-  top: 0;
-  left: 0;
-  position: relative;
-  width: 95px;
-  height: 100px;
+.presenter-image img {
+  width: 120px;
+  height: 120px;
 }
 
-.image-p {
-  top: 10px;
-  left: 10%;
-  position: absolute;
-  z-index: 10;
-  width: 60px;
+.presenter-details {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 12px;
+}
+
+.presenter-details p {
+  margin: 0;
+  padding: 0;
 }
 
 .underline-1 {
@@ -285,17 +275,17 @@ img {
   color: #ec5242;
 }
 
-.featured-presenters button {
-  width: 80%;
-}
-
-.featured-presenters button a {
-  text-decoration: none;
-}
-
-.featured-presenters button img {
-  width: 10px;
-  margin-left: 5px;
+#more {
+  background-color: #ec5242;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px 25px;
+  border: 1px solid #ec5242;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .partners {
@@ -487,6 +477,10 @@ footer h2 {
     width: 15px;
   }
 
+  .nav-menu {
+    display: flex;
+  }
+
   .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -555,9 +549,17 @@ footer h2 {
     padding: 10px 15px;
   }
 
-  .featured-presenters-list {
+  .presenters:nth-child(1),
+  .presenters:nth-child(2),
+  .presenters:nth-child(3),
+  .presenters:nth-child(4),
+  .presenters:nth-child(5),
+  .presenters:nth-child(6) {
     display: flex;
-    flex-direction: row;
+  }
+
+  #more {
+    display: none;
   }
 
   .history {

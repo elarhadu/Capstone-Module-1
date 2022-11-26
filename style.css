@@ -1,0 +1,715 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background: url(images/mobile\ background.png);
+  background-size: contain;
+}
+
+header {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.login {
+  display: none;
+}
+
+.pImg {
+  width: 285px;
+  height: 172.422px;
+}
+
+.bar {
+  display: flex;
+  width: 25px;
+  height: 5px;
+  padding: 1px;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+  background-color: #272a31;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.header-logo {
+  display: none;
+}
+
+.campaign {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: -15px;
+  z-index: 100;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+.no-scroll {
+  overflow-y: hidden;
+  background-color: white;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  left: -100%;
+  top: -17px;
+  background-color: #ec5242;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.nav-item {
+  margin: 16px 0;
+}
+
+.presenterSection {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.nav-link {
+  color: white;
+  transition: 0.7s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-menu.active {
+  left: 0;
+  padding: 0;
+}
+
+.nav-link:hover {
+  color: #272a31;
+  text-decoration: underline;
+}
+
+.intro {
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.movie-quote {
+  color: #ec5242;
+}
+
+.about-intro {
+  -webkit-background-clip: text;
+  background-image: url(images/header\ background.jpeg);
+  color: transparent;
+  font-size: 35px;
+  font-weight: 1000;
+}
+
+.about {
+  border: 2px solid white;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.program-outline {
+  background-color: #272a31;
+  background-image: url(images/diamond.png);
+  background-size: 25px;
+  color: white;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  padding: 10px 10px;
+}
+
+.schedule {
+  font-size: 15px;
+  justify-content: center;
+}
+
+.underline {
+  background-color: #ec5242;
+  width: 45px;
+  height: 0.5px;
+  margin-top: 10px;
+}
+
+.outline {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+}
+
+.outline-items {
+  display: flex;
+  background-color: #3d3f47;
+  align-items: center;
+  opacity: 0.5;
+  gap: 10px;
+  padding: 20px;
+}
+
+.outline-items h3 {
+  color: #d44c3a;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.outline-items p {
+  color: white;
+  font-size: 12px;
+}
+
+.outline-images {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+}
+
+.tickets {
+  background-color: #ec5242;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #ec5242;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.tickets a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+.more-schedule {
+  display: none;
+}
+
+.featured-presenters {
+  background-color: white;
+  color: #272a31;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  padding: 0 10px;
+}
+
+.presenter-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.presenters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  display: none;
+}
+
+.presenters:nth-child(1),
+.presenters:nth-child(2) {
+  display: flex;
+}
+
+.presenter-image {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  position: relative;
+}
+
+.presenter-image img {
+  width: 90px;
+  height: 90px;
+}
+
+.bgPresent {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.presenter-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.presenter-details p {
+  margin: 0;
+  padding: 0;
+}
+
+.underline-1 {
+  background-color: #3d3f47;
+  width: 10px;
+  height: 0.5px;
+  margin: 10px 0;
+}
+
+.career {
+  color: #ec5242;
+}
+
+#more {
+  background-color: #fffefe;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 10px 20px 10px;
+  border: 1px solid #ec5242;
+  padding: 10px 20px;
+  cursor: pointer;
+  gap: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.partners {
+  background-color: #272a31;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  color: white;
+}
+
+.partner-list {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.partner-list li {
+  width: 100%;
+  filter: grayscale(80%);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  justify-content: center;
+  background-color: white;
+}
+
+.footer-img {
+  width: 150px;
+}
+
+footer h2 {
+  font-size: 12px;
+}
+
+/* ABOUT PAGE */
+.about-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about p {
+  color: #ec5242;
+}
+
+.ceremony {
+  font-weight: 800;
+  color: #ec5242;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.history {
+  border: 2.5px solid white;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.reach-out {
+  font-size: 12px;
+  margin-top: 60px;
+}
+
+.about a {
+  color: black;
+  font-size: 16px;
+}
+
+.design-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 70px 10px;
+  text-align: center;
+}
+
+.design-logo p {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-logo {
+  width: 250px;
+  border: 2.5px solid #f1f1f1;
+  padding: 10px 40px;
+}
+
+.past-events {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 0 auto;
+  border-top: 1px solid #f1f1f1;
+  padding: 100px 50px 60px 50px;
+}
+
+.past-events h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.past-events p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-events {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.card-image-wrapper {
+  position: relative;
+}
+
+.card-image {
+  width: 285px;
+  height: 172.422px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #ec5242;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image img {
+  opacity: 0.4;
+}
+
+.card-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.card-info p {
+  margin: 0;
+  width: 220px;
+}
+
+.card-info h3 {
+  margin: 0;
+}
+
+.partners-1 {
+  background-color: #272a31;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  color: white;
+}
+
+@media (min-width: 769px) {
+  .bar {
+    display: none;
+  }
+
+  .login {
+    background-color: #272a31;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+    padding-right: 65px;
+  }
+
+  .login-item {
+    list-style: none;
+    color: white;
+    display: flex;
+    gap: 21px;
+  }
+
+  .facebook {
+    width: 15px;
+  }
+
+  .twitter {
+    width: 15px;
+  }
+
+  .nav-menu {
+    display: flex;
+    display: contents;
+    list-style: none;
+    text-decoration: none;
+    gap: 15px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 60px;
+    align-items: center;
+  }
+
+  .header-logo {
+    display: block;
+    width: 100px;
+  }
+
+  .nav-links {
+    display: block;
+  }
+
+  .image-logo {
+    width: 50%;
+  }
+
+  .imgLogo {
+    width: 300px;
+  }
+
+  .nav-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .outline-images {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+  }
+
+  .outline-items h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .outline-items p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: #3d3f47;
+  }
+
+  .nav-item::selection {
+    color: #ec5242;
+  }
+
+  .campaign {
+    display: block;
+    border: #ec5242 solid;
+    padding: 10px;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+
+    /* align-items: center; */
+    margin-top: 60px;
+    padding: 15px;
+    width: 50%;
+    margin-left: 50px;
+  }
+
+  .outline {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+    gap: 2px;
+  }
+
+  .outline li {
+    flex-direction: column;
+    flex: 1;
+    padding: 15px;
+  }
+
+  .tickets {
+    display: none;
+  }
+
+  .about {
+    width: 90%;
+    margin: 150px auto 0 auto;
+    height: 70vh;
+  }
+
+  .date {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .about-intro {
+    font-size: 60px;
+  }
+
+  .presenterSection {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 50px;
+  }
+
+  .program-outline {
+    padding: 70px 70px;
+  }
+
+  .outline-items {
+    min-height: 300px;
+  }
+
+  .more-schedule {
+    display: block;
+  }
+
+  .more-schedule a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 10px 15px;
+  }
+
+  .presenters:nth-child(1),
+  .presenters:nth-child(2),
+  .presenters:nth-child(3),
+  .presenters:nth-child(4),
+  .presenters:nth-child(5),
+  .presenters:nth-child(6) {
+    display: flex;
+  }
+
+  #more {
+    display: none;
+  }
+
+  .history {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px;
+  }
+
+  .card-events {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .partners-1 {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 2.5rem;
+    justify-content: center;
+    background-color: #272a31;
+  }
+
+  .footer h2 {
+    color: white;
+  }
+}

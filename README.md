@@ -140,7 +140,6 @@ If you like this project please give me a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank  Cindy Shin for her beautiful design.
 

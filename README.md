@@ -83,7 +83,7 @@ In this project, I designed a webpage with two pages .i.e. The Home page and the
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://elarhadu.github.io/Capstone-Module-1/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -83,6 +83,7 @@ In this project, I designed a webpage with two pages .i.e. The Home page and the
 
 
 - [Live Demo Link](https://elarhadu.github.io/Capstone-Module-1/)
+- [Loom Video Link](https://www.loom.com/share/3933ecbf72d94ffaa127d0ef3c72b4ec)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
